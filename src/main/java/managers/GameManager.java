@@ -9,14 +9,6 @@ public abstract class GameManager {
 
     Colours colours = new Colours();
 
-    public void count(int time, Plugin plugin, String msg){
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, () -> {
-            Bukkit.getOnlinePlayers().forEach(player -> {
-                colours.sendActionMessage(msg, player);
-            });
-        }, 0L, time);
-    }
-
     public void start(int gameTime, Plugin plugin){
         Bukkit.getScheduler().runTaskLaterAsynchronously(plugin, () ->{
 
