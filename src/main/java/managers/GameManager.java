@@ -6,7 +6,6 @@ import org.bukkit.plugin.Plugin;
 import utils.Colours;
 
 public abstract class GameManager {
-
     Colours colours = new Colours();
 
     public void start(int gameTime, Plugin plugin){

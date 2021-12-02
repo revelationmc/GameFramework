@@ -14,7 +14,7 @@ public abstract class JoinListener implements Listener {
     public int amount = 10;
     public int time = 300;
     public Plugin plugin = null;
-    public String msg = "&eGame starting in... &e" + time--;
+    public String msg = "&eGame starting in... &e";
 
 
     @EventHandler
@@ -25,7 +25,7 @@ public abstract class JoinListener implements Listener {
     }
 
     public boolean amount(){
-        return Bukkit.getOnlinePlayers().size() == this.amount ? true : false;
+        return Bukkit.getOnlinePlayers().size() == this.amount;
     }
 
     public void count(int time, Plugin plugin, String msg){
